@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                margin: 0px;
+            }
+            .containar{
+                width: 100vw;
+                height: 100vh;
+                background-color: aliceblue; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .headingbox{
+                width: 100vw;
+                height: 40px;
+                /* position: fixed; */
+                background-color:  #131921;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                padding-top: 15px;
+                
+            }
+            .navbox{
+                background-color:#232f3e;
+                width: 100vw;
+                height: 25px;
+                
+            }
+            .contantbox{
+                width: 100vw;
+                height: 85vh;
+                /* background-color: white; */
+                background-image: linear-gradient(red,white);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                
+
+            }
+            .boxes{
+                width: 200px;
+                height: 230px;
+                background-color:white;
+                display: flex;
+                flex-direction: column;
+                /* border-style: solid;
+                border-width: 1px;
+                border-color: black;
+                box-shadow: 1px 1px grey; */
+                flex-wrap: wrap;
+                
+                
+            }
+            .title{
+                font-weight: 600;
+                margin-left: 20px;
+                font-size: small;
+
+            }
+            .prodectcards{
+                width: 200px;
+                height: 180px;
+                background-color:white;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+            }
+            .prodectcard{
+                width: 70px;
+                height: 80px;
+                background-color: white;
+                margin: 6px;
+
+
+            }
+            .see-more{
+                margin-left: 20px;
+                color: blue;
+
+            }
+            .img{
+                width: 80px;
+                height: 55px;
+            }
+            .span{
+                font-size: x-small;
+                font-weight: 600;
+                margin-left: 5px;
+            }
+            .amazon{
+                flex: 1;
+                margin-left: 10px;
+            
+            }
+            .adress{
+                color: white;
+                font-size: small;
+
+            }
+            .adressbox{
+                flex: 1;
+            }
+            .searchbox{
+                flex: 1;
+                
+
+            }
+            .search{
+                width: 350px;
+
+            }
+            .indiabox{
+                flex: 2; 
+               
+                margin-left: 20px;
+                
+            }
+            .indiaimg{
+
+            }
+            
+            
+
+        </style>
+
+    </head>
+    <body>
+        
+
+        <div class=" containar">
+            
+            <div class="headingbox">
+                <div class="amazon" >
+                    <img src="data:image/png;base64,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"
+                   width="60px" />
+
+                </div>
+                <div class=" adressbox">
+                    <span class="adress" > Deliver <br/>Address</span>
+
+                </div>
+                <div class="searchbox">
+                    <input type="search" class="search" placeholder="search for products" >
+
+                </div>
+                <div class="indiabox">
+                    <img src="data:image/png;base64,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" 
+                    width="15px"/>
+
+                </div>
+                
+                
+    
+            </div>
+            <div class="contantbox">
+                <div class="boxes">
+                    <div class="title">
+                        Now India will say "Got it on Amazon!"
+
+                    </div>
+                    <div class="prodectcards" >
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/71ZWAzO-xsL._AC_SY135_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/91l5hLxiHCL._AC_SY110_.jpg" class="img">
+                            <span class="span">Mouse Pad</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/51HMIdsHzoL._AC_SY110_.jpg" class="img">
+                            <span class="span">Hdisk Cover</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/61bLBifjNnL._AC_SY110_.jpg" class="img">
+                            <span class="span">Charger</span>
+
+                        </div>
+
+                    </div>
+                    <div class="see-more">
+                        see more
+
+                    </div>
+
+                </div>
+                <div class="boxes">
+                    <div class="title">
+                        Now India will say "Got it on Amazon!"
+
+                    </div>
+                    <div class="prodectcards" >
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/81hReD7sE7L._AC_SY200_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/61sve3UwJFL._AC_SY175_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/41I0Ur9wh1L._AC_SY200_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/21gh7J64rvL._AC_SY200_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+
+                    </div>
+                    <div class="see-more">
+                        see more
+
+                    </div>
+
+                </div>
+                <div class="boxes">
+                    <div class="title">
+                        Now India will say "Got it on Amazon!"
+
+                    </div>
+                    <div class="prodectcards" >
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/31N38QeJPFL._AC_SY200_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/61uQpCLMnvL._AC_SY200_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/I/71GLMJ7TQiL._AC_UY327_FMwebp_QL65_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+                        <div class="prodectcard">
+                            <img src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/8cbb120a-e233-4693-9c0c-6cff35cbff3e._CR0,0,1200,628_SX405_QL50_.jpg" class="img">
+                            <span class="span">Monitor</span>
+
+                        </div>
+
+                    </div>
+                    <div class="see-more">
+                        see more
+
+                    </div>
+
+                </div>
+
+            </div>
+           
+
+        </div>
+        
+    </body>
+</html>
